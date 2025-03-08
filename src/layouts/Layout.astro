@@ -1,5 +1,6 @@
 ---
 import "./src/styles/global.css"
+import '@fontsource-variable/inter'
 
 const {title = "Agua Natural del Llano, naturalmente llanera"} = Astro.props
 ---
@@ -8,8 +9,7 @@ const {title = "Agua Natural del Llano, naturalmente llanera"} = Astro.props
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
+		<link rel="icon" type="image/svg+xml" href="/logo.svg" />
 		<title>{title}</title>
 	</head>
 	<body>
@@ -18,7 +18,10 @@ const {title = "Agua Natural del Llano, naturalmente llanera"} = Astro.props
 </html>
 
 <style>
-	html,
+	html{
+		font-family: font-family: 'Inter Variable', sans-serif;
+		background-color: #FFFFEB;
+	},
 	body {
 		margin: 0;
 		width: 100%;
