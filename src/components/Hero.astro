@@ -1,0 +1,32 @@
+---
+import Arrow from "./icons/Arrow.astro";
+import Share from "./icons/Share.astro";
+---
+
+<section class="grid grid-cols-2 pt-20 pl-20">
+  <div class="flex flex-col text-white-user">
+    <h1 class="font-title font-bold text-6xl/relaxed">NATURALMENTE LLANERA</h1>
+    <p class="pt-20 font-text font-medium text-3xl/relaxed">
+      La única agua que quita la sed del llanero, cuida, refresca y es 100%
+      local
+    </p>
+    <h3 class="py-8 font-text font-medium text-3xl/relaxed">
+      Hecha por nosotros
+    </h3>
+    <div class="flex items-center gap-44 pt-14">
+      <a href="">
+        <Share />
+      </a>
+      <a href="">
+        <Arrow />
+      </a>
+    </div>
+  </div>
+  <figure class="relative">
+    <img
+      class="absolute right-0 top-0 lg:max-w-185"
+        src="/src/assets/women.webp"
+      alt="mujer tomando agua en un día caluroso"
+    />
+  </figure>
+</section>

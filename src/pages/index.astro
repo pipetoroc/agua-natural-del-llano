@@ -1,0 +1,25 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import HeroWater from "../components/HeroWater.astro";
+import Impact from "../components/Impact.astro";
+
+import "../styles/global.css";
+---
+
+<Layout
+	description="La auténtica agua llanera que refresca e hidrata, extraida y tratada directamente de los llanos naturales Colombianos"
+	title="Agua natural del Llano"
+>
+	<main class="">
+		<div
+			class="bg-linear-to-b from-[#07458D] via-[#0473BE] via-40% to-[#07458D] h-dvh"
+		>
+			<Header />
+			<Hero />
+		</div>
+		<HeroWater />
+		<Impact />
+	</main>
+</Layout>
