@@ -2,7 +2,9 @@
 
 @theme {
   --color-white-user: #FFFFEB;
-  --color-secondary-color: #33537a;
+  --color-cream: #F9F9F1;
+  --color-secondary: #33537a;
+  --color-light: #DEF2F9;
 
   --font-text: Inter;
   --font-title: besley;
