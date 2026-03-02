@@ -1,6 +1,7 @@
 ---
-import Arrow from "./icons/Arrow.astro";
-import Share from "./icons/Share.astro";
+import Arrow from './icons/Arrow.astro'
+import Share from './icons/Share.astro'
+import Car from './icons/Car.astro'
 ---
 
 <section class="grid grid-cols-2 pt-20 pl-20">
@@ -11,7 +12,7 @@ import Share from "./icons/Share.astro";
       local
     </p>
     <h3 class="py-8 font-text font-medium text-3xl/relaxed">
-      Hecha por nosotros
+      Hecha por nosotros para nosotros
     </h3>
     <div class="flex items-center gap-44 pt-14">
       <a href="">
@@ -24,9 +25,15 @@ import Share from "./icons/Share.astro";
   </div>
   <figure class="relative">
     <img
-      class="absolute right-0 top-0 lg:max-w-185"
-        src="/src/assets/women.webp"
+      class="absolute right-0 top-0 mask-b-from-80% max-w-2xl"
+      src="/src/assets/women.webp"
       alt="mujer tomando agua en un día caluroso"
     />
+    <a
+      class="inline-flex items-center gap-2 px-8 py-4 rounded-3xl bg-white text-[#001a55] text-xl/normal font-bold absolute bottom-6 right-28"
+      target="_blank"
+      rel="noopener noreferrer">
+      <Car /> Comprar ahora</a
+    >
   </figure>
 </section>
