@@ -1,24 +1,60 @@
 ---
-import LogoDrop from "./icons/LogoDrop.astro";
+import LogoDrop from './icons/LogoDrop.astro'
+import Badge from './Badge.astro'
+import Star from './icons/Star.astro'
+import Heart from './icons/Heart.astro'
+import Shield from './icons/Shield.astro'
+import Drop from './icons/Drop.astro'
+import Cards from './Cards.astro'
 ---
 
-<section class="relative">
-  <img 
-    class="absolute top-0 left-0" src="/src/assets/left-tree.webp" alt="" />
-  <img
-    class="absolute top-0 right-0"
-    src="/src/assets/right-tree.webp"
-    alt=""
-  />
-  <LogoDrop class="size-16 block mx-auto"/>
-  <h1 
-    class="text-secondary text-3xl font-bold font-title text-center">
-    NUESTRA AGUA
-  </h1>
-  <p 
-    class="text-center font-text font-medium text-2xl/relaxed">
-    Agua proveniente de los manantiales naturales de los Llanos
-  </p>
-  <div></div>
-  <div></div>
+<section class="bg-cream">
+  <div class="relative">
+    <img
+      class="absolute top-0 left-0"
+      src="/src/assets/left-tree.webp"
+      alt=""
+    />
+    <img
+      class="absolute top-0 right-0"
+      src="/src/assets/right-tree.webp"
+      alt=""
+    />
+  </div>
+  <div
+    class="flex flex-col items-center py-16 justify-between z-10 max-w-100 mx-auto">
+    <LogoDrop class="size-16 block mx-auto" />
+    <h1
+      class="text-secondary text-3xl/relaxed font-bold font-title text-center tracking-wide py-7">
+      NUESTRA AGUA
+    </h1>
+    <p
+      class="text-center font-text font-medium text-2xl/relaxed text-test pb-9">
+      Agua proveniente de los manantiales naturales de los Llanos
+    </p>
+    <div class="flex gap-4">
+      <Badge><Star /> Belleza</Badge>
+      <Badge><Heart /> Salud</Badge>
+      <Badge><Shield /> Pureza</Badge>
+      <Badge><Drop /> Natural</Badge>
+    </div>
+    <div class="grid grid-cols-2 grid-rows-2 text-center gap-x-6 pt-9 pb-12">
+      <dd class="font-semibold font-text text-xl/relaxed">18.9</dd>
+      <dd class="font-semibold font-text text-xl/relaxed">∞</dd>
+      <dt class="text-test text-base/relaxed font-normal">Litros</dt>
+      <dt class="text-test text-base/relaxed font-normal">Beneficios</dt>
+    </div>
+  </div>
+  <div class="grid grid-cols-[auto_1fr] mx-auto justify-items-center">
+    <figure class="max-w-105">
+      <img
+        class="w-full"
+        src="../../public/bottle.webp"
+        alt="botellón de agua natural del llano con los iones y moléculas que la componen"
+      />
+    </figure>
+    <div class="flex flex-row flex-wrap gap-4 justify-center">
+      <Cards />
+    </div>
+  </div>
 </section>

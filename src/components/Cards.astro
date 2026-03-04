@@ -1,0 +1,64 @@
+---
+import Heart from './icons/Heart.astro'
+import Shield from './icons/Shield.astro'
+import Star from './icons/Star.astro'
+
+const features = [
+  {
+    icon: Heart,
+    title: 'Salud & Bienestar',
+    benefits: [
+      'Desintoxicación natural del cuerpo',
+      'Mejora la salud cardiobascular',
+      'Aporta vitalidad y buen humor diario'
+    ]
+  },
+  {
+    icon: Star,
+    title: 'Belleza & Cuidado',
+    benefits: [
+      'Hidratación superior para cabello y piel',
+      'Propiedadeds anti-acne naturales',
+      'Reducción de la hinchazón'
+    ]
+  },
+  {
+    icon: Shield,
+    title: 'Pureza & Origen',
+    benefits: [
+      '100% de manantiales naturales',
+      'Sin químicos y procesos artificiales',
+      'Minerales esenciales en equilibrio perfecto'
+    ]
+  }
+]
+---
+
+{
+  features.map((card) => {
+    const Icon = card.icon
+
+    return (
+      <article class="bg-white min-w-78 h-64 p-6 rounded-3xl">
+        <h1 class="flex justify-center items-center gap-4 font-semibold font-text text-xl tracking-wide text-secondary pb-6">
+          {Icon && (
+            <div class="p-2 bg-secondary rounded-full">
+              <Icon
+                strokeWidth={1}
+                class="text-white"
+              />
+            </div>
+          )}
+          {card.title}
+        </h1>
+        <ul class="list-disc list-outside pl-2">
+          {card.benefits.map((benefit) => (
+            <li class="font-text text-base/normal text-dark font-normal pb-1">
+              {benefit}
+            </li>
+          ))}
+        </ul>
+      </article>
+    )
+  })
+}
