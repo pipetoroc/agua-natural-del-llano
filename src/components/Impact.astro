@@ -1,0 +1,71 @@
+---
+import Arrow from './icons/Arrow.astro'
+import Recicle from './icons/Recicle.astro'
+import ImpactPill from './ImpactPill.astro'
+import House from './icons/House.astro'
+import Devolution from './icons/Devolution.astro'
+import Reuse from './icons/Reuse.astro'
+import Clean from './icons/Clean.astro'
+---
+
+<section
+  class="relative bg-[url('../../public/mountains.webp')] bg-cover h-full text-center pt-24">
+  <div
+    class="absolute inset-0 bg-gradient-to-t from-white/70 via-white/75 via-75% to-transparent to-100%">
+  </div>
+  <div class="flex flex-col justify-center items-center text-center">
+    <Recicle class="z-10 text-secondary" />
+    <h1
+      class="pt-8 pb-15 text-secondary font-title font-bold text-3xl/relaxed tracking-wide z-10">
+      Impacto
+    </h1>
+    <p class="pb-8 font-text text-test text-2xl font-medium z-10">
+      Impacto directo en el precio y en el entorno
+    </p>
+    <p
+      class="block bg-light max-w-135 p-6 rounded-3xl text-dark font-text text-xl font-normal z-10">
+      Al devolver el botellón, no se convierte en basura vuelve al ciclo y
+      reduce residuos
+    </p>
+  </div>
+
+  <div class="relative grid grid-cols-2 gap-38 max-w-lg mx-auto pt-15 pb-15">
+    <Arrow class="absolute rotate-90 left-2/5 top-10" />
+    <Arrow class="absolute rotate-180 left-3/4 top-[45%]" />
+    <Arrow class="absolute left-1/10 top-[45%]" />
+    <Arrow class="absolute rotate-270 left-2/5 bottom-[20%]" />
+    <article class="flex flex-col items-center gap-6 z-10">
+      <ImpactPill><House /></ImpactPill>
+      <dd class="text-dark font-text text-xl/snug font-normal">Uso</dd>
+      <dt class="text-secondary font-text text-base/snug font-normal">
+        Botellon llega a tu hogar
+      </dt>
+    </article>
+
+    <article class="flex flex-col items-center gap-6 z-10">
+      <ImpactPill><Devolution /></ImpactPill>
+      <dd class="text-dark font-text text-xl/snug font-normal">Devolución</dd>
+      <dt class="text-secondary font-text text-base/snug font-normal">
+        El botellón regresa, no se convierte en basura
+      </dt>
+    </article>
+
+    <article class="flex flex-col items-center gap-6 z-10">
+      <ImpactPill><Reuse /></ImpactPill>
+      <dd class="text-dark font-text text-xl/snug font-normal">Reuso</dd>
+      <dt class="text-secondary font-text text-base/snug font-normal">
+        Vuelve al ciclo, reduce costos y mantiene el agua accesible
+      </dt>
+    </article>
+
+    <article class="flex flex-col items-center gap-6 z-10">
+      <ImpactPill><Clean /></ImpactPill>
+      <dd class="text-dark font-text text-xl/snug font-normal">
+        Limpieza y preparación
+      </dd>
+      <dt class="text-secondary font-text text-base/snug font-normal">
+        Se limpia y revisa para reutilización
+      </dt>
+    </article>
+  </div>
+</section>
