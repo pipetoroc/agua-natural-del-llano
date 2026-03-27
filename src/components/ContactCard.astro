@@ -1,0 +1,15 @@
+---
+const { title, description } = Astro.props
+---
+
+<div class="flex p-6 bg-[#084991] rounded-2xl gap-4 shadow-lg">
+  <div class="bg-cream p-4 rounded-xl">
+    <slot />
+  </div>
+  <div class="flex flex-col items-start">
+    <h2 class="font-text text-lg/loose font-bold text-cream">{title}</h2>
+    <p class="font-text text-base/loose font-normal text-white-user">
+      {description}
+    </p>
+  </div>
+</div>
