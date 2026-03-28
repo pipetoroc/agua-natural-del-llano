@@ -3,11 +3,13 @@ const {
   height = '66',
   width = 'auto',
   strokeColor = '#ffffeb',
-  fillColor = '#ffffeb'
+  fillColor = '#ffffeb',
+  class: className = ''
 } = Astro.props
 ---
 
 <svg
+  class={className}
   xmlns="http://www.w3.org/2000/svg"
   width={width}
   height={height}

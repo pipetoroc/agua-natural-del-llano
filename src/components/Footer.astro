@@ -1,0 +1,52 @@
+---
+import Logo from './icons/Logo.astro'
+---
+
+<footer
+  class="flex flex-wrap pt-16 px-6 bg-linear-to-b from-secondary to-[#001139]">
+  <div
+    class="flex flex-col w-1/2 items-start text-white-user font-text text-sm/relaxed font-normal">
+    <Logo class="w-auto mb-2.5" />
+    <p class="w-2xs text-pretty">
+      Agua pura y natural, directamente traida de la fuente a tu hogar.
+    </p>
+    <p>Calidad premium en cada gota.</p>
+  </div>
+  <div class="w-1/4 text-white-user font-text text-lg/relaxed font-normal">
+    <h2 class="mb-6">Contacto</h2>
+    <p class="mb-4 text-white-user/80 text-sm">+57 320 962 94 49</p>
+    <p class="mb-4 text-white-user/80 text-sm">
+      contacto@agua-natural-del-llano.com
+    </p>
+    <p class="mb-4 text-white-user/80 text-sm">
+      Calle 35 N.° 51-29, La Azotea, Villavicencio, Colombia
+    </p>
+  </div>
+  <div class="w-1/4 text-white-user font-text text-lg/relaxed font-normal">
+    <h2 class="mb-6">Newsletter</h2>
+    <p class="mb-4 text-white-user/80 text-sm">
+      Recibe novedades y ofertas especiales.
+    </p>
+    <form
+      class="w-full"
+      action="">
+      <input
+        class="w-full py-2 px-3 rounded-xl border border-secondary bg-secondary text-secondary/50 placeholder:text-white-user/50"
+        type="text"
+        placeholder="Tu correo electrónico"
+      />
+      <button
+        class="w-full bg-white py-2 px-3 rounded-xl text-secondary font-text text-sm/relaxed font-medium mt-3"
+        type="submit"
+        >Suscribirse</button
+      >
+    </form>
+  </div>
+  <div
+    class="flex justify-between w-full py-16 mt-11 border-t border-white-user/20">
+    <p></p>
+    <p class="text-white-user/60 font-text text-sm/relaxed font-normal">
+      © 2026 Del Llano
+    </p>
+  </div>
+</footer>
