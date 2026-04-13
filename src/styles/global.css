@@ -55,7 +55,7 @@
   transform: scaleX(1);
 }
 
-.nav-link.active::before {
+.active::before {
   content: url('/src/assets/gota.svg');
   position: absolute;
   left: -20px;
