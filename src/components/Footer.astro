@@ -1,5 +1,8 @@
 ---
+import Location from './icons/Location.astro'
 import Logo from './icons/Logo.astro'
+import Message from './icons/Message.astro'
+import Telephone from './icons/Telephone.astro'
 ---
 
 <footer
@@ -14,11 +17,14 @@ import Logo from './icons/Logo.astro'
   </div>
   <div class="w-1/4 text-white-user font-text text-lg/relaxed font-normal">
     <h2 class="mb-6">Contacto</h2>
-    <p class="mb-4 text-white-user/80 text-sm">+57 320 962 94 49</p>
-    <p class="mb-4 text-white-user/80 text-sm">
-      contacto@agua-natural-del-llano.com
+    <p class="flex items-center gap-2 mb-4 text-white-user/80 text-sm">
+      <Telephone class="size-5 text-badge" /> +57 320 962 94 49
     </p>
-    <p class="mb-4 text-white-user/80 text-sm">
+    <p class="flex items-center gap-2 mb-4 text-white-user/80 text-sm">
+      <Message class="size-5 text-badge" /> contacto@agua-natural-del-llano.com
+    </p>
+    <p class="flex items-center gap-2 mb-4 text-white-user/80 text-sm">
+      <Location class="size-5 text-badge" />
       Calle 35 N.° 51-29, La Azotea, Villavicencio, Colombia
     </p>
   </div>
@@ -27,9 +33,7 @@ import Logo from './icons/Logo.astro'
     <p class="mb-4 text-white-user/80 text-sm">
       Recibe novedades y ofertas especiales.
     </p>
-    <form
-      class="w-full"
-      action="">
+    <form class="w-full" action="">
       <input
         class="w-full py-2 px-3 rounded-xl border border-secondary bg-secondary text-secondary/50 placeholder:text-white-user/50"
         type="text"
@@ -37,8 +41,7 @@ import Logo from './icons/Logo.astro'
       />
       <button
         class="w-full bg-white py-2 px-3 rounded-xl text-secondary font-text text-sm/relaxed font-medium mt-3"
-        type="submit"
-        >Suscribirse</button
+        type="submit">Suscribirse</button
       >
     </form>
   </div>

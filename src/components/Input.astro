@@ -2,13 +2,11 @@
 const { description, title } = Astro.props
 ---
 
-<label
-  for=""
-  class="font-text text-base/snug font-normal text-dark"
+<label for="" class="font-text text-base/snug font-normal text-dark"
   >{title}</label
 >
 <input
   type="text"
-  class="w-full py-3 px-4 bg-white rounded-lg border border-secondary/20"
+  class="w-full py-3 px-4 bg-white rounded-lg border border-secondary/20 text-dark/40"
   placeholder={description}
 />
