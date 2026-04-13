@@ -12,3 +12,53 @@
   --font-text: Inter;
   --font-title: besley;
 }
+
+.nav-link {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* línea base (invisible) */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  border-radius: 9999px;
+
+  background: var(--color-badge); /* reemplaza con tu text-badge */
+  
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+/* hover elegante */
+.nav-link:hover {
+  color: var(--color-badge); /* text-badge */
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* estado activo */
+.nav-link.active {
+  color: var(--color-badge); /* text-badge */
+}
+
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
+.nav-link.active::before {
+  content: url('/src/assets/gota.svg');
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+}

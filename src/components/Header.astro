@@ -1,28 +1,62 @@
 ---
-import Logo from "./icons/Logo.astro"
+import Logo from './icons/Logo.astro'
 ---
 
-<header class="h-[111.51px] px-20 py-4 font-medium text-xl bg-linear-to-b from-[#07458D] to-[#06519A]">
+<header
+  class="fixed top-0 left-0 w-full z-50 h-[111.51px] px-20 py-4 font-medium text-xl bg-linear-to-b from-[#07458D] to-[#06519A]">
   <nav class="flex items-center justify-between h-full">
     <a>
-      <Logo/>
+      <Logo />
     </a>
     <ul class="flex items-center gap-16">
       <li>
-        <a class="text-white-user" href="#" >Home</a>
+        <a class="nav-link text-white-user" href="#home">Home</a>
       </li>
       <li>
-        <a class="text-white-user" href="#" >Nuestra agua</a>
+        <a class="nav-link text-white-user" href="#ourWater">Nuestra agua</a>
       </li>
       <li>
-        <a class="text-white-user" href="#" >Impacto</a>
+        <a class="nav-link text-white-user" href="#impact">Impacto</a>
       </li>
       <li>
-        <a class="text-white-user" href="#" >Nosotros</a>
+        <a class="nav-link text-white-user" href="#we">Nosotros</a>
       </li>
       <li>
-        <a class="px-7 py-3 border rounded-2xl text-white-user" href="#" >Contacto</a>
+        <a class="px-7 py-3 border rounded-2xl text-white-user" href="#contact"
+          >Contacto</a
+        >
       </li>
     </ul>
   </nav>
 </header>
+
+<script>
+  const sections = document.querySelectorAll<HTMLElement>('section[id]')
+  const navLinks = document.querySelectorAll<HTMLElement>('nav a')
+
+  let options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.5
+  }
+
+  const callback = (entries: IntersectionObserverEntry[]) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return
+
+      const id = entry.target.id
+
+      navLinks.forEach((link) => link.classList.remove('active'))
+
+      const activeLink = document.querySelector<HTMLAnchorElement>(
+        `nav a[href="#${id}"]`
+      )
+      activeLink?.classList.add('active')
+    })
+  }
+
+  const observer = new IntersectionObserver(callback, options)
+  sections.forEach((section) => {
+    observer.observe(section)
+  })
+</script>
