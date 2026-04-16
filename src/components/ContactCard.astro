@@ -2,7 +2,11 @@
 const { title, description } = Astro.props
 ---
 
-<div class="flex p-6 bg-[#084991] rounded-2xl gap-4 shadow-lg">
+<div
+  class:list={[
+    'flex p-6 bg-[#084991] rounded-2xl gap-4 shadow-lg',
+    Astro.props.class
+  ]}>
   <div class="flex justify-center size-14 items-center bg-cream p-4 rounded-xl">
     <slot />
   </div>
@@ -12,4 +16,5 @@ const { title, description } = Astro.props
       {description}
     </p>
   </div>
+  <slot name="extra" />
 </div>
