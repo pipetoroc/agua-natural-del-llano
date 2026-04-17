@@ -15,12 +15,13 @@
 
 .nav-link {
   position: relative;
+  display: inline-block;
   color: white;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.25s ease;
 }
 
-/* línea base (invisible) */
+/* línea animada */
 .nav-link::after {
   content: "";
   position: absolute;
@@ -30,29 +31,40 @@
   height: 2px;
   border-radius: 9999px;
 
-  background: var(--color-badge); /* reemplaza con tu text-badge */
-  
+  background: var(--color-badge);
+
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 0.3s ease;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* hover elegante */
+/* hover (solo desktop realmente) */
 .nav-link:hover {
-  color: var(--color-badge); /* text-badge */
+  color: var(--color-badge);
 }
 
 .nav-link:hover::after {
   transform: scaleX(1);
 }
 
-/* estado activo */
+/* activo */
 .nav-link.active {
-  color: var(--color-badge); /* text-badge */
+  color: var(--color-badge);
+  transform: scale(0.96);
 }
 
 .nav-link.active::after {
   transform: scaleX(1);
+  animation: underlineIn 0.4s ease;
+}
+
+@keyframes underlineIn {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
 }
 
 .active::before {

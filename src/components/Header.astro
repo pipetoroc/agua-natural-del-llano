@@ -3,36 +3,94 @@ import Logo from './icons/Logo.astro'
 ---
 
 <header
-  class="fixed top-0 left-0 w-full z-50 h-[111.51px] px-20 py-4 font-medium text-xl bg-linear-to-b from-[#07458D] to-[#06519A]">
-  <nav class="flex items-center justify-between h-full">
-    <a>
-      <Logo />
-    </a>
-    <ul class="flex items-center gap-16">
-      <li>
-        <a class="nav-link text-white-user" href="#home">Home</a>
-      </li>
-      <li>
-        <a class="nav-link text-white-user" href="#ourWater">Nuestra agua</a>
-      </li>
-      <li>
-        <a class="nav-link text-white-user" href="#impact">Impacto</a>
-      </li>
-      <li>
-        <a class="nav-link text-white-user" href="#we">Nosotros</a>
-      </li>
-      <li>
-        <a class="px-7 py-3 border rounded-2xl text-white-user" href="#contact"
-          >Contacto</a
+  class="fixed w-full z-20 top-0 start-0 h-[111.51px] font-medium text-xl bg-linear-to-b from-[#07458D] to-[#06519A]">
+  <nav class="">
+    <div
+      class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-20 py-4">
+      <a href="#">
+        <Logo />
+      </a>
+      <button
+        data-collapse-toggle="navbar-default"
+        type="button"
+        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm min-[1100px]:hidden focus:outline-none focus:ring-2"
+        aria-controls="navbar-default"
+        aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg
+          class="w-6 h-6 text-white-user"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          fill="none"
+          viewBox="0 0 24 24"
+          ><path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-width="2"
+            d="M5 7h14M5 12h14M5 17h14"></path></svg
         >
-      </li>
-    </ul>
+      </button>
+      <div
+        class="fixed top-0 left-0 w-full h-screen bg-[#07458D]/95 backdrop-blur-md flex flex-col justify-center items-center
+        opacity-0 pointer-events-none -translate-y-4
+        transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)]
+        min-[1100px]:static min-[1100px]:h-auto min-[1100px]:bg-transparent min-[1100px]:backdrop-blur-none
+        min-[1100px]:opacity-100 min-[1100px]:pointer-events-auto min-[1100px]:translate-y-0
+        min-[1100px]:flex min-[1100px]:w-auto"
+        id="navbar-default">
+        <button
+          id="close-menu"
+          class="absolute top-6 right-8 text-white text-3xl min-[1100px]:hidden">
+          ✕
+        </button>
+        <ul
+          class="flex flex-col gap-8 text-2xl text-white min-[1100px]:flex-row min-[1100px]:gap-16 min-[1100px]:text-base">
+          <li>
+            <a
+              href="#home"
+              class="nav-link block rounded text-white-user md:p-0"
+              aria-current="page">Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#ourWater"
+              class="nav-link block rounded text-white-user md:border-0 md:p-0"
+              >Nuestra agua</a
+            >
+          </li>
+          <li>
+            <a
+              href="#impact"
+              class="nav-link block rounded text-white-user md:border-0 md:p-0"
+              >Impacto</a
+            >
+          </li>
+          <li>
+            <a
+              href="#we"
+              class="nav-link block rounded text-white-user md:border-0 md:p-0"
+              >Nosotros</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="nav-link block rounded text-white-user md:border-0 md:p-0"
+              >Contacto</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
   </nav>
 </header>
 
 <script>
   const sections = document.querySelectorAll<HTMLElement>('section[id]')
-  const navLinks = document.querySelectorAll<HTMLElement>('nav a')
+  const navLinks = document.querySelectorAll<HTMLElement>('li a')
 
   let options = {
     root: null,
@@ -49,14 +107,40 @@ import Logo from './icons/Logo.astro'
       navLinks.forEach((link) => link.classList.remove('active'))
 
       const activeLink = document.querySelector<HTMLAnchorElement>(
-        `nav a[href="#${id}"]`
+        `li a[href="#${id}"]`
       )
       activeLink?.classList.add('active')
     })
   }
 
   const observer = new IntersectionObserver(callback, options)
+
   sections.forEach((section) => {
     observer.observe(section)
+  })
+
+  const toggleButton = document.querySelector('[data-collapse-toggle]')
+  const navbar = document.getElementById('navbar-default')
+  const closeButton = document.getElementById('close-menu')
+
+  const openMenu = () => {
+    navbar?.classList.remove(
+      'opacity-0',
+      'pointer-events-none',
+      '-translate-y-4'
+    )
+    document.body.style.overflow = 'hidden'
+  }
+
+  const closeMenu = () => {
+    navbar?.classList.add('opacity-0', 'pointer-events-none', '-translate-y-4')
+    document.body.style.overflow = ''
+  }
+
+  toggleButton?.addEventListener('click', openMenu)
+  closeButton?.addEventListener('click', closeMenu)
+
+  navLinks.forEach((link) => {
+    link.addEventListener('click', closeMenu)
   })
 </script>
