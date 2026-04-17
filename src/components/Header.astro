@@ -35,7 +35,7 @@ import Logo from './icons/Logo.astro'
       <div
         class="fixed top-0 left-0 w-full h-screen bg-[#07458D]/95 backdrop-blur-md flex flex-col justify-center items-center
         opacity-0 pointer-events-none -translate-y-4
-        transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)]
+        transition-all duration-300 ease-in-out
         min-[1100px]:static min-[1100px]:h-auto min-[1100px]:bg-transparent min-[1100px]:backdrop-blur-none
         min-[1100px]:opacity-100 min-[1100px]:pointer-events-auto min-[1100px]:translate-y-0
         min-[1100px]:flex min-[1100px]:w-auto"
@@ -46,39 +46,39 @@ import Logo from './icons/Logo.astro'
           ✕
         </button>
         <ul
-          class="flex flex-col gap-8 text-2xl text-white min-[1100px]:flex-row min-[1100px]:gap-16 min-[1100px]:text-base">
+          class="flex flex-col gap-8 font-text text-white min-[1100px]:flex-row min-[1100px]:gap-16 min-[1100px]:text-base">
           <li>
             <a
               href="#home"
-              class="nav-link block rounded text-white-user md:p-0"
+              class="nav-link block rounded text-xl text-white-user md:p-0"
               aria-current="page">Home</a
             >
           </li>
           <li>
             <a
               href="#ourWater"
-              class="nav-link block rounded text-white-user md:border-0 md:p-0"
+              class="nav-link block rounded text-xl text-white-user md:border-0 md:p-0"
               >Nuestra agua</a
             >
           </li>
           <li>
             <a
               href="#impact"
-              class="nav-link block rounded text-white-user md:border-0 md:p-0"
+              class="nav-link block rounded text-xl text-white-user md:border-0 md:p-0"
               >Impacto</a
             >
           </li>
           <li>
             <a
               href="#we"
-              class="nav-link block rounded text-white-user md:border-0 md:p-0"
+              class="nav-link block rounded text-xl text-white-user md:border-0 md:p-0"
               >Nosotros</a
             >
           </li>
           <li>
             <a
               href="#contact"
-              class="nav-link block rounded text-white-user md:border-0 md:p-0"
+              class="nav-link block rounded text-xl text-white-user md:border-0 md:p-0"
               >Contacto</a
             >
           </li>
@@ -129,11 +129,13 @@ import Logo from './icons/Logo.astro'
       'pointer-events-none',
       '-translate-y-4'
     )
+    toggleButton?.setAttribute('aria-expanded', 'true')
     document.body.style.overflow = 'hidden'
   }
 
   const closeMenu = () => {
     navbar?.classList.add('opacity-0', 'pointer-events-none', '-translate-y-4')
+    toggleButton?.setAttribute('aria-expanded', 'false')
     document.body.style.overflow = ''
   }
 
