@@ -4,28 +4,35 @@ import Share from './icons/Share.astro'
 import Car from './icons/Car.astro'
 ---
 
-<section class="grid grid-cols-2 pt-[115px] pl-20" id="home">
+<section
+  class="grid grid-cols-1 px-5 md:px-20 lg:grid-cols-2 pt-[115px] max-w-7xl mx-auto"
+  id="home">
   <div class="flex flex-col text-white-user">
-    <h1 class="font-title font-bold text-6xl/relaxed">NATURALMENTE LLANERA</h1>
-    <p class="pt-20 font-text font-medium text-3xl/relaxed">
+    <h1
+      class="font-title font-bold text-3xl/relaxed sm:text-5xl/relaxed md:text-6xl/relaxed">
+      NATURALMENTE LLANERA
+    </h1>
+    <p
+      class="pt-10 font-text font-medium text-xl text-pretty md:pt-20 sm:text-2xl/relaxed md:text-3xl/relaxed">
       La única agua que quita la sed del llanero, cuida, refresca y es 100%
       local
     </p>
-    <h3 class="py-8 font-text font-medium text-3xl/relaxed">
+    <h3
+      class="pt-8 sm:py-8 font-text font-medium text-xl/relaxed sm:text-2xl/relaxed md:text-3xl/relaxed">
       Hecha por nosotros para nosotros
     </h3>
-    <div class="flex items-center gap-44 pt-14">
+    <div class="flex items-center gap-44 py-10 md:pt-14">
       <a href="">
-        <Share />
+        <Share class="size-12 md:size-16" />
       </a>
       <a href="">
         <ArrowDown />
       </a>
     </div>
   </div>
-  <figure class="relative">
+  <figure class="lg:relative">
     <img
-      class="absolute right-0 top-0 mask-b-from-80% max-w-2xl"
+      class="w-full lg:absolute lg:right-0 lg:top-0 lg:mask-b-from-80% max-w-2xl xl:mask-r-from-95%"
       src="/src/assets/women.webp"
       alt="mujer tomando agua en un día caluroso"
     />
