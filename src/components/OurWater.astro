@@ -8,31 +8,31 @@ import Drop from './icons/Drop.astro'
 import Cards from './Cards.astro'
 ---
 
-<section class="bg-cream pb-8" id="ourWater">
+<section class="pb-8 bg-cream" id="ourWater">
   <div class="relative">
     <img
-      class="absolute top-0 left-0"
+      class="absolute top-0 left-0 scale-40 origin-top-left sm:scale-50 lg:scale-75 xl:scale-100"
       src="/src/assets/left-tree.webp"
       alt=""
     />
     <img
-      class="absolute top-0 right-0"
+      class="absolute top-0 right-0 scale-40 origin-top-right sm:scale-50 lg:scale-75 xl:scale-100"
       src="/src/assets/right-tree.webp"
       alt=""
     />
   </div>
   <div
-    class="flex flex-col items-center py-16 justify-between z-10 max-w-100 mx-auto">
-    <LogoDrop class="size-16 block mx-auto" />
+    class="flex flex-col items-center px-5 py-16 justify-between max-w-7xl mx-auto">
+    <LogoDrop class="size-14 sm:size-16 block mx-auto z-10" />
     <h1
-      class="text-secondary text-3xl/relaxed font-bold font-title text-center tracking-wide py-7">
+      class="text-secondary text-3xl/relaxed font-bold font-title text-center tracking-wide py-7 z-10">
       NUESTRA AGUA
     </h1>
     <p
-      class="text-center font-text font-medium text-2xl/relaxed text-test pb-9">
+      class="pb-9 max-w-[30ch] text-center font-text font-medium text-2xl/relaxed text-test z-10">
       Agua proveniente de los manantiales naturales de los Llanos
     </p>
-    <div class="flex gap-4">
+    <div class="flex gap-4 flex-wrap justify-center">
       <Badge><Star /> Belleza</Badge>
       <Badge><Heart /> Salud</Badge>
       <Badge><Shield /> Pureza</Badge>
@@ -45,15 +45,16 @@ import Cards from './Cards.astro'
       <dt class="text-test text-base/relaxed font-normal">Beneficios</dt>
     </div>
   </div>
-  <div class="grid grid-cols-[auto_1fr] mx-auto justify-items-center">
-    <figure class="max-w-105">
+  <div
+    class="grid grid-cols-1 max-w-7xl md:grid-cols-[auto_1fr] mx-auto justify-items-center content-center">
+    <figure class="max-w-105 pb-20 md:pb-0">
       <img
         class="w-full"
         src="../../public/bottle.webp"
         alt="botellón de agua natural del llano con los iones y moléculas que la componen"
       />
     </figure>
-    <div class="flex flex-row flex-wrap gap-4 justify-center">
+    <div class="flex flex-row flex-wrap gap-4 justify-center px-5">
       <Cards />
     </div>
   </div>
