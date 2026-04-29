@@ -5,7 +5,7 @@ import Car from './icons/Car.astro'
 ---
 
 <section
-  class="grid grid-cols-1 px-5 pt-[115px] max-w-7xl mx-auto md:px-20 lg:grid-cols-2 lg:pr-0"
+  class="grid grid-cols-1 px-5 pt-[115px] max-w-7xl mx-auto overflow-hidden md:px-20 lg:grid-cols-2 lg:pr-0 lg:overflow-visible"
   id="home">
   <div class="flex flex-col text-white-user">
     <h1
@@ -32,7 +32,7 @@ import Car from './icons/Car.astro'
   </div>
   <figure class="lg:relative">
     <img
-      class="w-full lg:absolute lg:right-0 lg:top-0 lg:mask-b-from-80% max-w-2xl xl:mask-r-from-95%"
+      class="w-full max-w-2xl scale-110 min-[720px]:mask-r-from-95% lg:absolute lg:right-0 lg:top-0 lg:mask-b-from-80% lg:mask-l-from-95%"
       src="/src/assets/women.webp"
       alt="mujer tomando agua en un día caluroso"
     />
