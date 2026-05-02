@@ -1,21 +1,13 @@
 ---
-
+const { w = 80, h = 96 } = Astro.props
 ---
 
-<svg
-  {...Astro.props}
-  xmlns="http://www.w3.org/2000/svg"
-  width="80"
-  height="96"
-  fill="none"
-  viewBox="0 0 80 96"
+<svg {...Astro.props} width={w} height={h} fill="none" viewBox="0 0 80 96"
   ><path
     stroke="#33537a"
     stroke-linecap="round"
     stroke-width="1.587"
-    d="M39.677 87.288V7.935"
-  ></path><path
+    d="M39.677 87.288V7.935"></path><path
     fill="#33537a"
-    d="m39.676 5.555-3.174 4.76h6.348z"
-  ></path></svg
+    d="m39.676 5.555-3.174 4.76h6.348z"></path></svg
 >

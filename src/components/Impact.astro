@@ -14,7 +14,8 @@ import Clean from './icons/Clean.astro'
   <div
     class="absolute inset-0 bg-gradient-to-t from-white/70 via-white/75 via-75% to-transparent to-100%">
   </div>
-  <div class="flex flex-col justify-center items-center text-center">
+  <div
+    class="flex flex-col justify-center items-center text-center px-5 sm:px-0">
     <Recicle class="z-10 text-secondary" />
     <h1
       class="pt-8 pb-15 text-secondary font-title font-bold text-3xl/relaxed tracking-wide z-10">
@@ -30,11 +31,14 @@ import Clean from './icons/Clean.astro'
     </p>
   </div>
 
-  <div class="relative grid grid-cols-2 gap-38 max-w-lg mx-auto pt-15 pb-15">
-    <Arrow class="absolute rotate-90 left-2/5 top-10" />
-    <Arrow class="absolute rotate-180 left-3/4 top-[45%]" />
-    <Arrow class="absolute left-1/10 top-[45%]" />
-    <Arrow class="absolute rotate-270 left-2/5 bottom-[20%]" />
+  <div
+    class="relative grid grid-cols-2 gap-x-16 gap-y-38 max-w-lg mx-auto pt-15 pb-15 px-5 sm:px-0 sm:gap-38">
+    <Arrow class="absolute rotate-90 left-2/5 top-12 w-14 sm:w-20" />
+    <Arrow class="absolute rotate-180 left-2/3 top-[40%] sm:left-3/4" />
+    <Arrow class="absolute left-1/10 top-[40%]" />
+    <Arrow
+      class="absolute rotate-270 left-2/5 bottom-[30%] sm:bottom-[20%] w-14 sm:w-20"
+    />
     <article class="flex flex-col items-center gap-6 z-10">
       <ImpactPill><House /></ImpactPill>
       <dd class="text-dark font-text text-xl/snug font-semibold">Uso</dd>
