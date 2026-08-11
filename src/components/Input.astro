@@ -1,12 +1,13 @@
 ---
-const { description, title } = Astro.props
+const { description, name, title, type } = Astro.props
 ---
 
 <label for="" class="font-text text-base/snug font-normal text-dark"
   >{title}</label
 >
 <input
-  type="text"
+  type={type}
   class="w-full py-3 px-4 bg-white rounded-lg border border-secondary/20 text-dark/40"
   placeholder={description}
+  name={name}
 />
