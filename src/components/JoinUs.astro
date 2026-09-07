@@ -1,5 +1,8 @@
 ---
 import Picture from './Picture.astro'
+import cup from '../assets/cup.webp'
+import people from '../assets/people.webp'
+import food from '../assets/food.webp'
 ---
 
 <section class="bg-[#084991] pt-24">
@@ -18,16 +21,13 @@ import Picture from './Picture.astro'
     Llano
     <div class="flex
     justify-center py-23 gap-8">
+      <Picture src={cup.src} alt="vaso con agua natural del Llano" />
       <Picture
-        src="/src/assets/cup.webp"
-        alt="vaso con agua natural del Llano"
-      />
-      <Picture
-        src="/src/assets/people.webp"
+        src={people.src}
         alt="Personas reunidas alrededor de un botellon de agua natural del Llano haciendo un brindis"
       />
       <Picture
-        src="/src/assets/food.webp"
+        src={food.src}
         alt="Mesa con comida típica del Llano y un botellon de agua natural del Llano"
       />
     </div>
