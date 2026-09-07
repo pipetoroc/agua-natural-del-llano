@@ -6,19 +6,20 @@ import Heart from './icons/Heart.astro'
 import Shield from './icons/Shield.astro'
 import Drop from './icons/Drop.astro'
 import Cards from './Cards.astro'
-import bottle from '../assets/bottle.webp'
+import leftTree from '../assets/left-tree.webp'
+import rightTree from '../assets/right-tree.webp'
 ---
 
 <section class="pb-8 bg-cream" id="ourWater">
   <div class="relative">
     <img
       class="absolute top-0 left-0 scale-40 origin-top-left sm:scale-50 lg:scale-75 xl:scale-100 timeline-view animate-slide-in-left animate-slide-distance-[40%]"
-      src="/src/assets/left-tree.webp"
+      src={leftTree.src}
       alt=""
     />
     <img
       class="absolute top-0 right-0 scale-40 origin-top-right sm:scale-50 lg:scale-75 xl:scale-100 timeline-view animate-slide-in-right animate-slide-distance-[40%]"
-      src="/src/assets/right-tree.webp"
+      src={rightTree.src}
       alt=""
     />
   </div>
@@ -51,7 +52,7 @@ import bottle from '../assets/bottle.webp'
     <figure class="relative max-w-105 pb-20 md:pb-0">
       <img
         class="w-full"
-        src={bottle.src}
+        src="/public/bottle.webp"
         alt="botellón de agua natural del llano con los iones y moléculas que la componen"
       />
       <div
