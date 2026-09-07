@@ -11,18 +11,18 @@ import Cards from './Cards.astro'
 <section class="pb-8 bg-cream" id="ourWater">
   <div class="relative">
     <img
-      class="absolute top-0 left-0 scale-40 origin-top-left sm:scale-50 lg:scale-75 xl:scale-100"
+      class="absolute top-0 left-0 scale-40 origin-top-left sm:scale-50 lg:scale-75 xl:scale-100 timeline-view animate-slide-in-left animate-slide-distance-[40%]"
       src="/src/assets/left-tree.webp"
       alt=""
     />
     <img
-      class="absolute top-0 right-0 scale-40 origin-top-right sm:scale-50 lg:scale-75 xl:scale-100"
+      class="absolute top-0 right-0 scale-40 origin-top-right sm:scale-50 lg:scale-75 xl:scale-100 timeline-view animate-slide-in-right animate-slide-distance-[40%]"
       src="/src/assets/right-tree.webp"
       alt=""
     />
   </div>
   <div
-    class="flex flex-col items-center px-5 py-16 justify-between max-w-7xl mx-auto">
+    class="flex flex-col items-center px-5 py-16 justify-between max-w-7xl mx-auto timeline-view animate-slide-in-bottom animate-range-[entry_10%_contain_20%] animate-slide-distance-[100%]">
     <LogoDrop class="size-14 sm:size-16 block mx-auto z-10" />
     <h1
       class="text-secondary text-3xl/relaxed font-bold font-title text-center tracking-wide py-7 z-10">
@@ -47,12 +47,47 @@ import Cards from './Cards.astro'
   </div>
   <div
     class="grid grid-cols-1 max-w-7xl md:grid-cols-[auto_1fr] mx-auto justify-items-center content-center">
-    <figure class="max-w-105 pb-20 md:pb-0">
+    <figure class="relative max-w-105 pb-20 md:pb-0">
       <img
         class="w-full"
         src="../../public/bottle.webp"
         alt="botellón de agua natural del llano con los iones y moléculas que la componen"
       />
+      <div
+        class="ion absolute bottom-[35%] left-[30%] flex justify-center items-center size-10 bg-secondary rounded-full text-cream animate-bouncing">
+        Ca
+      </div>
+      <div
+        class="ion absolute bottom-[55%] left-[30%] flex justify-center items-center size-10 bg-secondary rounded-full text-cream animate-bouncing"
+        style="animation-delay: 3.5s;">
+        Cl <sup>-</sup>
+      </div>
+      <div
+        class="ion absolute bottom-[75%] left-[30%] flex justify-center items-center size-10 bg-secondary rounded-full text-cream animate-bouncing"
+        style="animation-delay: 2.5s;">
+        Mg
+      </div>
+      <div
+        class="ion absolute bottom-[45%] left-[50%] flex justify-center items-center size-10 bg-secondary rounded-full text-cream animate-bouncing"
+        style="animation-delay: 0.25s;">
+        Na
+      </div>
+      <div
+        class="ion absolute bottom-[60%] left-[60%] flex justify-center items-center size-10 bg-secondary rounded-full text-cream animate-bouncing"
+        style="animation-delay: 0.25s;">
+        K
+      </div>
+      <div
+        class="ion absolute bottom-[35%] left-[60%] flex justify-center items-center size-10 bg-secondary rounded-full text-cream animate-bouncing"
+        style="animation-delay: 1.5s;">
+        F<sup>-</sup>
+      </div>
+      <div
+        class="ion absolute bottom-[80%] left-[45%] flex justify-center items-center size-10 bg-secondary rounded-full text-cream animate-bouncing"
+        style="animation-delay: 0.5s;">
+        S<sub>4</sub>
+        <sup>2-</sup>
+      </div>
     </figure>
     <div class="flex flex-row flex-wrap gap-4 justify-center px-5">
       <Cards />
