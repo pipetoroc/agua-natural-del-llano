@@ -1,20 +1,26 @@
 ---
-const { title, description } = Astro.props
+const { title, description, href } = Astro.props
 ---
 
-<div
+<a
+  href={href}
+  target="_blank"
   class:list={[
-    'flex p-6 bg-[#084991] rounded-2xl gap-4 shadow-lg',
+    'group flex p-6 bg-[#084991] rounded-2xl gap-4 shadow-lg cursor-pointer transition-all duration-300 ease-out hover:scale-[1.02] hover:shadow-lg ',
     Astro.props.class
   ]}>
-  <div class="flex justify-center size-14 items-center bg-cream p-4 rounded-xl">
+  <div
+    class="flex justify-center size-14 items-center bg-cream p-4 rounded-xl transition-colors duration-300 ease-out group-hover:bg-badge">
     <slot />
   </div>
   <div class="flex flex-col items-start">
-    <h2 class="font-text text-lg/loose font-bold text-cream">{title}</h2>
+    <h2
+      class="font-text text-lg/loose font-bold text-cream transition-colors duration-300 ease-out group-hover:text-badge">
+      {title}
+    </h2>
     <p class="font-text text-base/loose font-normal text-white-user">
       {description}
     </p>
   </div>
   <slot name="extra" />
-</div>
+</a>

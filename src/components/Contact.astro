@@ -217,21 +217,36 @@ import WhatsappIcon from './icons/WhatsappIcon.astro'
         ¿Qué funciona mejor para ti?
       </h2>
       <div class="flex flex-col py-8 px-6 bg-[#084991] gap-9 mt-3 rounded-2xl">
-        <ContactCard title="Whatsapp" description="+57 320 962 9449">
-          <WhatsappIcon class="w-5 text-secondary stroke-2" />
+        <ContactCard
+          title="Whatsapp"
+          description="+57 320 962 9449"
+          href="https://wa.me/573209629449">
+          <WhatsappIcon
+            class="w-5 text-secondary stroke-2 group-hover:text-cream"
+          />
         </ContactCard>
-        <ContactCard title="Teléfono" description="+57 320 962 9449">
-          <Telephone class="w-5 text-secondary stroke-2" />
+        <ContactCard
+          title="Teléfono"
+          description="+57 320 962 9449"
+          href="tel:+573209629449">
+          <Telephone
+            class="w-5 text-secondary stroke-2 group-hover:text-cream"
+          />
         </ContactCard>
-        <ContactCard title="Email" description="+57 320 962 9449">
-          <Message class="w-5 text-secondary stroke-2" />
+        <ContactCard
+          title="Email"
+          description="+57 320 962 9449"
+          href="mailto:contacto@agua-natural-del-llano.com">
+          <Message class="w-5 text-secondary stroke-2 group-hover:text-cream" />
         </ContactCard>
 
         <ContactCard
           class="flex-wrap"
           title="Ubicación"
           description="Calle 35 N.° 51-29, La Azotea, Villavicencio, Colombia">
-          <Location class="w-5 text-secondary stroke-2" />
+          <Location
+            class="w-5 text-secondary stroke-2 group-hover:text-cream"
+          />
           <div class="grow" slot="extra">
             <iframe
               class="w-full h-48 rounded-lg border-0"
