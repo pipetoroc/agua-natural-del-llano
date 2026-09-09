@@ -1,21 +1,29 @@
 ---
 import workingMan from '../assets/working-man.webp'
+import Group from './icons/Group.astro'
 ---
 
 <section class="bg-cream pb-16" id="we">
   <div class="relative">
-    <img class="absolute top-0 left-0" src="/src/assets/left-we.webp" alt="" />
     <img
-      class="absolute top-0 right-0"
+      class="absolute top-0 left-0 origin-top-left scale-50 sm:scale-70 lg:scale-85 xl:scale-100"
+      src="/src/assets/left-we.webp"
+      alt=""
+    />
+    <img
+      class="absolute top-0 right-0 origin-top-right scale-50 sm:scale-70 lg:scale-85 xl:scale-100"
       src="/src/assets/right-we.webp"
       alt=""
     />
   </div>
-  <h1
-    class="pt-48 text-center text-secondary text-3xl tracking-wide font-title font-bold">
-    NOSOTROS
-  </h1>
-  <div class="flex justify-between w-6xl mt-16 mx-auto">
+  <div class="pt-24">
+    <Group class="mx-auto" />
+    <h1
+      class="pt-8 text-center text-secondary text-3xl tracking-wide font-title font-bold">
+      NOSOTROS
+    </h1>
+  </div>
+  <div class="flex justify-center gap-12 flex-wrap xl:w-6xl mt-16 mx-auto">
     <figure class="relative w-md">
       <img
         class="w-full rounded-3xl object-cover"
