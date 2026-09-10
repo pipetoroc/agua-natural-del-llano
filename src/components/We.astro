@@ -1,18 +1,20 @@
 ---
 import workingMan from '../assets/working-man.webp'
 import Group from './icons/Group.astro'
+import leftWe from '../assets/left-we.webp'
+import rightWe from '../assets/right-we.webp'
 ---
 
 <section class="bg-cream pb-16" id="we">
   <div class="relative">
     <img
       class="absolute top-0 left-0 origin-top-left scale-50 sm:scale-70 lg:scale-85 xl:scale-100"
-      src="/src/assets/left-we.webp"
+      src={leftWe.src}
       alt=""
     />
     <img
       class="absolute top-0 right-0 origin-top-right scale-50 sm:scale-70 lg:scale-85 xl:scale-100"
-      src="/src/assets/right-we.webp"
+      src={rightWe.src}
       alt=""
     />
   </div>
