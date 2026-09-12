@@ -23,12 +23,12 @@ import WhatsappIcon from './icons/WhatsappIcon.astro'
   <p class="font-text text-2xl font-medium tracking-wide text-secondary/75">
     Ponte en contacto para pedidos, dudas o lo que necesites.
   </p>
-  <div class="flex flex-wrap pt-16 gap-7">
+  <div class="flex flex-col flex-wrap p-16 gap-7 max-w-7xl mx-auto lg:flex-row">
     <form
       id="contact-form"
       action="https://api.web3forms.com/submit"
       method="Post"
-      class="flex flex-wrap items-center flex-1 pl-20 gap-4">
+      class="flex flex-wrap flex-1 gap-4 xl:pl-0">
       <h2
         class="mb-8 w-full text-secondary font-text text-xl/relaxed tracking-wide font-semibold">
         Envíanos un mensaje
@@ -133,16 +133,19 @@ import WhatsappIcon from './icons/WhatsappIcon.astro'
     </form>
 
     <script>
-      const form = document.querySelector('#contact-form')
-      const modal = document.querySelector('#success-modal')
-      const closeModalButton = document.querySelector('#close-modal')
+      const form = document.querySelector<HTMLFormElement>('#contact-form')
+      const modal = document.querySelector<HTMLElement>('#success-modal')
+      const closeModalButton =
+        document.querySelector<HTMLButtonElement>('#close-modal')
 
       form?.addEventListener('submit', async (event) => {
         event.preventDefault()
 
         if (!form || !modal) return
 
-        const submitButton = form.querySelector('button[type="submit"]')
+        const submitButton = form.querySelector<HTMLButtonElement>(
+          'button[type="submit"]'
+        )
 
         if (submitButton) {
           submitButton.disabled = true
@@ -209,9 +212,13 @@ import WhatsappIcon from './icons/WhatsappIcon.astro'
           modal?.classList.add('hidden')
         }
       })
+
+      window.addEventListener('load', () => {
+        form?.reset()
+      })
     </script>
 
-    <div class="flex-1 pr-20">
+    <div class="flex-1 xl:pr-0">
       <h2
         class="mb-8 w-full text-secondary font-text text-xl/relaxed tracking-wide font-semibold">
         ¿Qué funciona mejor para ti?
@@ -244,9 +251,7 @@ import WhatsappIcon from './icons/WhatsappIcon.astro'
           class="flex-wrap"
           title="Ubicación"
           description="Calle 35 N.° 51-29, La Azotea, Villavicencio, Colombia">
-          <Location
-            class="w-5 text-secondary stroke-2 group-hover:text-cream"
-          />
+          <Location class="text-secondary stroke-2 group-hover:text-cream" />
           <div class="grow" slot="extra">
             <iframe
               class="w-full h-48 rounded-lg border-0"
@@ -268,10 +273,3 @@ import WhatsappIcon from './icons/WhatsappIcon.astro'
     </h3>
   </div>
 </section>
-
-<script>
-  window.onload = function () {
-    // Reset the form fields when the page loads
-    document.getElementById('contact').reset()
-  }
-</script>
